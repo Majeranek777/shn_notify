@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+
+*{
+    overflow: hidden;
+    image-rendering: crisp-edges;
+}
+
+body{
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.notify{
+    padding: 3dvh;
+    margin-top: 15dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container{
+    margin: 1.5dvh;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* background: linear-gradient(148deg, rgba(7,18,30,0.5) 19%, rgba(7,18,30,0.5) 55%, rgba(7,18,30,0.5) 66%, rgba(0,255,228,0.5) 100%); */
+    background-color: #31313198;
+
+
+
+    backdrop-filter: blur(10px);
+    border-radius: 0.7dvh;
+
+    animation: appear, rotate ease;
+    animation-duration: 0.5s, 1s;
+    animation-delay: 0s, 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* .warning-border{
+    background: linear-gradient(to right, red, purple);
+    position: relative;
+    max-width: 0.5dwh;
+    border-radius: 0.7dvh;
+}
+ */
+.warning-square{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 1.5dvh;
+    color:red;
+}
+
+.info-square{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 1.5dvh;
+    text-shadow: 0px 0px 2px rgb(55, 0, 255);
+    color: rgb(137, 207, 239);
+}
+
+.bank-square{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 1.5dvh;
+    text-shadow: 0px 0px 2px #8bda5d;
+    color: #85bb65;
+}
+
+.megaphone-square{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 1.5dvh;
+    text-shadow: 0px 0px 2px #ffb01e;
+    color: #FFA500;
+}
+
+.phone-square{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 1.5dvh;
+    text-shadow: 0px 0px 2px #ffffff;
+    color: #FFFDFA;
+}
+.work-square{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 1.5dvh;
+    text-shadow: 0px 0px 2px #949494;
+    color: #808080;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25dvh;
+    animation: popup, crotate ease;
+    animation-duration: 0.5s, 1s;
+    animation-delay: 0s, 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 1.5dvh;
+    height: 1.5dvh;
+    border-radius: 50%;
+    background-color: rgba(27, 27, 27, 0.301);
+    box-shadow: inset 0px 0px 100px -43px rgba(64, 64, 64, 0.62);
+
+}
+
+.rectangle{
+    position: relative;
+    max-width: 0;
+    transform-origin: 0% 50%;
+
+    animation: rectangle ease;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+}
+
+.title{ 
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    position: relative;
+    font-size: 1.7dvh;
+    font-weight: bold;
+}
+
+.message{
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 0.3dvh;
+    margin-left: 0.3dvh;
+    color: white;
+    font-size: 1.4dvh;
+    position: relative;
+}
+
+
+.fa-solid{
+    display: block;
+    position: relative;
+    font-size: 2dvh;
+    margin: -2.5dvh;
+}
+
+.text{
+    white-space: nowrap;
+    flex-direction: column;
+    align-items:center;
+    padding: 1dvh;
+    z-index: 1;
+
+    animation: text;
+    animation-duration: 0.5s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes popup {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+    
+}
+
+@keyframes text {
+    to{
+        white-space: normal;
+    }
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+}
+
+@keyframes rotate {
+    45%{
+        transform: rotate(-80deg);
+    }
+    60%{
+        transform: rotate(30deg); 
+    }
+    to{
+        transform: rotate(0deg);
+    }
+    
+}
+
+@keyframes crotate {
+    45%{
+        transform: rotate(80deg);
+    }
+    60%{
+        transform: rotate(-30deg); 
+    }
+    to{
+        transform: rotate(-0deg);
+    }
+    
+}
+
+@keyframes rectangle {
+    to{
+        max-width: 60dvh;
+        max-height: 170dvh;
+    }
+    
+}

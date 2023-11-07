@@ -1,0 +1,1 @@
+var element = document.getElementByClassName('h1');
